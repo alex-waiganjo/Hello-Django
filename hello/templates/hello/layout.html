@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'hello/site.css' %}"/>
+</head>
+
+<body>
+<div class="navbar">    
+    <!-- <a href="{% url '' %}" class="navbar-item">Django</a> -->
+    <a href="{% url 'flask' %}" class="navbar-item">Flask</a>
+    <a href="{% url 'fast_api' %}" class="navbar-item">Fastapi</a>
+    <a href="{% url 'log' %}" class="navbar-item">Log Message</a>
+    
+</div>
+
+<div class="body-content">
+    {% block content %}
+    {% endblock %}
+    <hr/>
+    <footer>
+        <p> Created by Alex   © 2022</p>
+    </footer>
+</div>
+</body>
+</html>
